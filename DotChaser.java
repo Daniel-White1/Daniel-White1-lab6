@@ -11,6 +11,7 @@ public class DotChaser {
    *
    * A STATIC CLASS? OH NO! GET IT OUT OF HERE!
    */
+  /* 
   public static class Thing {
     // dir: 0=North, 1=East, 2=South, 3=West.
     // timeSinceLast: this is only important for "TypeB" Things.
@@ -24,7 +25,7 @@ public class DotChaser {
    * HINT: WOULDN'T IT BE NICE TO HAVE A LIST OR QUEUE SO THAT
    *       WE DON'T HAVE TO USE NODES HERE?
    * This class is for linked lists of Thing's
-   */
+   
   public static class Node {
     public Thing data;
     public Node  next;
@@ -76,7 +77,7 @@ public class DotChaser {
     t.row += dr[t.dir];
     t.col += dc[t.dir];
   }
-
+*/
   
   /**
    * This static method is ok :)

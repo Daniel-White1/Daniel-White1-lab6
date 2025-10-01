@@ -1,3 +1,4 @@
-public class ThingA {
+public class ThingA extends Thing {
+    
     
 }
