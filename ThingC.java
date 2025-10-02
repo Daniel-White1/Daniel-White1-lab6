@@ -5,8 +5,9 @@ public class ThingC extends ThingB{
 
     public Random rand = new Random(System.currentTimeMillis());
 
-    public ThingC (int row, int col, int dir, int timeSinceLast, char lab){
-        super(row, col, dir, lab);
+    public ThingC (int row, int col){
+        super(row, col);
+        lab = 'm';
         this.timeSinceLast = 0;
     }
 

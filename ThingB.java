@@ -5,8 +5,9 @@ public class ThingB extends Thing {
     public Random rand = new Random(System.currentTimeMillis());
     protected int timeSinceLast = 0;
 
-    public ThingB (int row, int col, int dir, char lab){
-        super(row, col, dir, lab);
+    public ThingB (int row, int col){
+        super(row, col);
+        lab = 'b';
     }
 
     public void maybeTurn(Thing t) {

@@ -6,15 +6,13 @@ public abstract class Thing {
     protected int  row, col, dir;
 
     //set red to be the default thing color
-    protected char lab = 'r';
+    protected char lab;
 
     //Constructor for the thing. It didnt let me set up the constructor to be empty like lecture 4
     //So I just set it up that the constructor sets the objects variables that can be called by the children Thing objects
-    public Thing(int row, int col, int dir, char lab){
+    public Thing(int row, int col){
         this.row = row;
         this.col = col;
-        this.dir = dir;
-        this.lab = lab;
     }
     
     //as no objects are going to change right turn it can be defined in the abstract

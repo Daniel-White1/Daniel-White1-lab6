@@ -88,8 +88,8 @@ public class DotChaser {
     if( args.length != 0 )
       N = Integer.parseInt(args[0]);
 
-    // INSTEAD OF A NODE, CREATE SOMETHING MORE USER-FRIENDLY.
-    Node L = null;
+    // INSTEAD OF A NODE, CREATE SOMETHING MORE USER-FRIENDLY
+    ThingList thingList = new ThingList();
     int count = 0;
 
     while( true ) {
@@ -98,41 +98,41 @@ public class DotChaser {
 
         // Add a typeA thing to the list.
         // (GEE, THAT'S A LOT OF CODE FOR JUST CREATING ONE THING)
-        Thing tA = new Thing();
-        tA.row = 45;
-        tA.col = 50;
-        Node nA = new Node();
-        nA.data = tA;
-        nA.next = L;
-        L       = nA;
+        Thing tA = new ThingA(45, 50);
+        Node nA = new Node(tA,  null);
+        thingList.addLast(nA);
 
         // Add a typeB thing to the list
-        Thing tB = new Thing();
-        tB.row     = 55;
-        tB.col     = 50;
-        tB.lab     = 'b';
-        tB.isTypeB = true;
-        Node nB = new Node();
-        nB.data = tB;
-        nB.next = L;
-        L       = nB;
+        Thing tB = new ThingB(55, 50);
+        Node nB = new Node(tB, null);
+        thingList.addLast(nB);
+
+        // Add a typeC thing to the list
+        Thing tC = new ThingC(65, 50);
+        Node nC = new Node(tC, null);
+        thingList.addLast(nC);
       }
 
       // Print out each thing.
       // (SEEMS LIKE A NICE PRINTALL() METHOD CALL WOULD WORK HERE)
       // (SEEMS LIKE A toString() METHOD IN THE CLASS WOULD ALSO BE NICE)
+      /*
       for( Node T = L; T != null; T = T.next )
         System.out.println(T.data.row + " " + T.data.col + " " + T.data.lab);
 
       System.out.println("done");
       System.out.flush();
+      */
+      thingList.printAll();
 
       // Move each thing.
       // (SEEMS LIKE A NICE MOVEALL() METHOD CALL WOULD WORK HERE)
+      /*
       for( Node T = L; T != null; T = T.next ) {
         maybeTurn(T.data);
         step(T.data);
       }
+        */
       count++;
     }
   }
