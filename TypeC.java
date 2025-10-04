@@ -12,19 +12,19 @@ public class TypeC extends TypeB{
     }
 
     //This maybe turn zig zags until the 6th step where it turns sets up to turn left or right
-    public void maybeTurn(Thing t) {
-        int i = rand.nextInt(3);
+    public void maybeTurn(Random r) {
+        int i = r.nextInt(3);
         this.timeSinceLast++;
 
         //if the timeSinceLast is even and the time since last does not equal 6 then turn left
         if (timeSinceLast % 2 == 0 && timeSinceLast != 6) {
-            leftTurn(t);
+            this.leftTurn();
         }
 
         //if the timeSinceLast is odd and not equal to zero then turn right
         if (timeSinceLast % 2 != 0 && timeSinceLast != 0)
         {
-            rightTurn(t);
+            this.rightTurn();
         }
 
         //if the time since Last is 6 than randomly choose to contine straight or continue left or right.
@@ -33,10 +33,10 @@ public class TypeC extends TypeB{
             //restarts the process by setting timesSinceLast to zero
             this.timeSinceLast = 0;
             if (i == 1) {
-                rightTurn(t);
+                this.rightTurn();
             }
             if (i == 2) {
-                leftTurn(t);
+                this.leftTurn();
             }
         }
     }

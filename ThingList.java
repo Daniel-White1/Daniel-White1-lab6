@@ -42,8 +42,8 @@ public class ThingList {
     public void moveAll(){
         for( Node T = head; T.getNext() != null; T = T.getNext() ) {
             Thing data = T.getData();
-            data.maybeTurn(T.getData());
-            data.step(T.getData());
+            data.maybeTurn(data.rand);
+            data.step();
         }
     }
 }

@@ -1,9 +1,11 @@
+import java.util.Random;
 
 public abstract class Thing {
         
     // dir: 0=North, 1=East, 2=South, 3=West.
     // timeSinceLast: this is only important for "TypeB" Things.
     protected int  row, col, dir;
+    protected Random rand = new Random(System.currentTimeMillis());
 
     //set red to be the default thing color
     protected char lab;
@@ -16,26 +18,26 @@ public abstract class Thing {
     }
     
     //as no objects are going to change right turn it can be defined in the abstract
-    protected void rightTurn(Thing t) {
-        t.dir = (t.dir + 1) % 4;
+    public void rightTurn() {
+        this.dir = (this.dir + 1) % 4;
     }
 
     //as no objects are going to turn left it can be defined in the abstract
-    protected void leftTurn(Thing t) {
-        t.dir = (t.dir + 3) % 4;
+    public void leftTurn() {
+        this.dir = (this.dir + 3) % 4;
     }
 
     //However the maybeTurn will be changing for each object so it will be an abstract method
-    abstract void maybeTurn(Thing t);
+    abstract void maybeTurn(Random rand);
 
     //Finally step will remain the same so it can be defined in the abstract
-    protected void step(Thing t) {
+    public void step() {
         final int[] dc = {
             0, 1, 0, -1
         }, dr = {
             1, 0, -1, 0
         };
-        t.row += dr[t.dir];
-        t.col += dc[t.dir];
+        this.row += dr[this.dir];
+        this.col += dc[this.dir];
     }
 }

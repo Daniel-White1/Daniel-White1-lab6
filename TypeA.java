@@ -9,14 +9,14 @@ public class TypeA extends Thing {
         lab = 'r';
     }
 
-    public void maybeTurn(Thing t) {
-        int i = rand.nextInt(3);
+    public void maybeTurn(Random r) {
+        int i = r.nextInt(3);
         if (i == 1) {
-            rightTurn(t);
+            this.rightTurn();
         }
 
         if (i == 2) {
-            leftTurn(t);
+           this.leftTurn();
         }
     }
 }
