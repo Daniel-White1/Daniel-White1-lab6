@@ -28,7 +28,7 @@ public abstract class Thing {
     }
 
     //However the maybeTurn will be changing for each object so it will be an abstract method
-    abstract void maybeTurn(Random rand);
+    public abstract void maybeTurn(Random rand);
 
     //Finally step will remain the same so it can be defined in the abstract
     public void step() {
