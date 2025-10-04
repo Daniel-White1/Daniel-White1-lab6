@@ -1,10 +1,10 @@
 import java.util.Random;
 
-public class ThingA extends Thing {
+public class TypeA extends Thing {
 
     public Random rand = new Random(System.currentTimeMillis());
 
-    public ThingA (int row, int col){
+    public TypeA (int row, int col){
         super(row, col);
         lab = 'r';
     }

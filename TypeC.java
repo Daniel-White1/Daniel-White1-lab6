@@ -1,11 +1,11 @@
 import java.util.Random;
 
 //ThingC is a diagnoal move aka zig zag thingy.
-public class ThingC extends ThingB{
+public class TypeC extends TypeB{
 
     public Random rand = new Random(System.currentTimeMillis());
 
-    public ThingC (int row, int col){
+    public TypeC (int row, int col){
         super(row, col);
         lab = 'm';
         this.timeSinceLast = 0;

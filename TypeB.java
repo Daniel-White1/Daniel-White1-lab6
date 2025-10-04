@@ -1,11 +1,11 @@
 import java.util.Random;
 
-public class ThingB extends Thing {
+public class TypeB extends Thing {
     
     public Random rand = new Random(System.currentTimeMillis());
     protected int timeSinceLast = 0;
 
-    public ThingB (int row, int col){
+    public TypeB (int row, int col){
         super(row, col);
         lab = 'b';
     }
