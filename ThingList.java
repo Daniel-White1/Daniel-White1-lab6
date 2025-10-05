@@ -1,3 +1,5 @@
+import java.util.Random;
+
 public class ThingList {
 
     private class Node{
@@ -44,10 +46,10 @@ public class ThingList {
       System.out.flush();
     }
 
-    public void moveAll(){
+    public void moveAll(Random rand){
         for( Node T = head; T.next != null; T = T.next) {
             Thing curData = T.data;
-            curData.maybeTurn(curData.rand);
+            curData.maybeTurn(rand);
             curData.step();
         }
     }

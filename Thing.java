@@ -5,8 +5,7 @@ public abstract class Thing {
     // dir: 0=North, 1=East, 2=South, 3=West.
     // timeSinceLast: this is only important for "TypeB" Things.
     protected int  row, col, dir;
-    protected Random rand = new Random(System.currentTimeMillis());
-
+    
     //set red to be the default thing color
     protected char lab;
 

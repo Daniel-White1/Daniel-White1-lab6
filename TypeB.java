@@ -2,7 +2,6 @@ import java.util.Random;
 
 public class TypeB extends Thing {
     
-    public Random rand = new Random(System.currentTimeMillis());
     protected int timeSinceLast = 0;
 
     public TypeB (int row, int col){

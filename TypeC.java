@@ -3,8 +3,6 @@ import java.util.Random;
 //ThingC is a diagnoal move aka zig zag thingy.
 public class TypeC extends TypeB{
 
-    public Random rand = new Random(System.currentTimeMillis());
-
     public TypeC (int row, int col){
         super(row, col);
         lab = 'm';

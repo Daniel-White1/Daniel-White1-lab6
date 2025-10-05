@@ -1,7 +1,7 @@
 import java.util.*;
 
 public class DotChaser {
-  //public Random rand = new Random(System.currentTimeMillis());
+  public static Random rand = new Random(System.currentTimeMillis());
 
   /**
    * A "Thing" moves in a grid world. A TypeA Thing randomly
@@ -130,7 +130,7 @@ public class DotChaser {
         step(T.data);
       }
         */
-      thingList.moveAll();
+      thingList.moveAll(rand);
 
       count++;
     }
