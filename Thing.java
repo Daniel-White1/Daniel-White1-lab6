@@ -4,9 +4,9 @@ public abstract class Thing {
         
     // dir: 0=North, 1=East, 2=South, 3=West.
     // timeSinceLast: this is only important for "TypeB" Things.
-    protected int  row, col, dir;
-    
-    //set red to be the default thing color
+    protected int row;
+    protected int col;
+    protected int dir;
     protected char lab;
 
     //Constructor for the thing. It didnt let me set up the constructor to be empty like lecture 4
