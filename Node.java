@@ -1,3 +1,6 @@
+/*
+
+guess I have to make the nodes a private inner class in thinglist.
 public class Node {
 
     private Thing data;
@@ -57,3 +60,4 @@ public class Node {
         curNode.next = nextNode;
     }
 }
+    */

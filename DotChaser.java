@@ -99,18 +99,15 @@ public class DotChaser {
         // Add a typeA thing to the list.
         // (GEE, THAT'S A LOT OF CODE FOR JUST CREATING ONE THING) not anymore :)
         Thing tA = new TypeA(45, 50);
-        Node nA = new Node(tA,  null);
-        thingList.addLast(nA);
+        thingList.addThing(tA);
 
         // Add a typeB thing to the list
         Thing tB = new TypeB(55, 50);
-        Node nB = new Node(tB, null);
-        thingList.addLast(nB);
+        thingList.addThing(tB);
 
         // Add a typeC thing to the list
         Thing tC = new TypeC(65, 50);
-        Node nC = new Node(tC, null);
-        thingList.addLast(nC);
+        thingList.addThing(tC);
       }
 
       // Print out each thing.
